@@ -1,0 +1,12 @@
+{
+  "name": "IonicBase",
+  "app_id": "3aaf105b",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

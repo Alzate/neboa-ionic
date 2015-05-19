@@ -1,0 +1,7 @@
+<ion-view view-title="Galery" class="full">
+  <ion-content class="padding galery">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <slide-img img='img' ng-repeat="img in images"></slide-img>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>
