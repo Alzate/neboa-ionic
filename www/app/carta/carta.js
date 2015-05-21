@@ -9,12 +9,12 @@ angular.module('starter.controllers')
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-      .state('tab.products', {
-      url: '/products',
+      .state('tab.carta', {
+      url: '/carta',
       views: {
-        'tab-products': {
-          templateUrl: 'app/products/products.html',
-          controller: 'ProductsCtrl'
+        'tab-carta': {
+          templateUrl: 'app/carta/carta.html',
+          controller: 'CartaCtrl'
         }
       }
     });
