@@ -43,6 +43,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 .logo {
   text-align: center;
-  width: 270px;
-  height: 270px;
+}
+.bar.bar-stable .title {
+    color: #007A7A !important;
+}
+
+.item-divider {
+    background-color: #007A7A;
+    color: #eee;
 }
