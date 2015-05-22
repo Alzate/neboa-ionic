@@ -3,8 +3,8 @@ angular.module('starter.controllers')
 .controller('ContactCtrl', function($scope, $cordovaSocialSharing) {
 
   $scope.zoom = 13;
-  $scope.lat = 39.476918;
-  $scope.lng = -0.381689;
+  $scope.lat = 39.4770535;
+  $scope.lng = -0.381305;
   $scope.title = 'My Place';
 
 

@@ -7692,3 +7692,8 @@ a.button {
 
 .item-body p.bottom {
   margin: 0; }
+
+.logo {
+  text-align: center;
+  width: 270px;
+  height: 270px; }
