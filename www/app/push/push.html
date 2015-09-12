@@ -1,18 +1,21 @@
 <ion-view view-title="Push">
-  <ion-content class="padding">
+<ion-content class="padding">
 
-    <div class="bar bar-header bar-stable">
-      <h1 class="title">PUSH</h1>
-    </div>
+<br>
 
-    <br>
+<div class="card">
 
-    <div class="card">
-      <div class="item item-text-wrap">
-        Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.
-        No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Recientemente con software de autoedición.
-      </div>
-    </div>
+  <div class="item text-center">
+    <h2>{{push.title}}</h2>
+    <p>Neboa</p>
+  </div>
+  <div class="item item-text-wrap">
+    {{push.description}}
+  </div>
+  <div class="logo">
+    <img ng-src="{{push.image}}" ng-show="push.image">
+  </div>
+</div>
 
-  </ion-content>
+</ion-content>
 </ion-view>

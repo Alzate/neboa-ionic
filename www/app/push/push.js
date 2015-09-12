@@ -6,7 +6,7 @@ angular.module('starter.controllers')
       .state('tab.push', {
       url: '/push',
       views: {
-        'tab-push': {
+        'tab-home': {
           templateUrl: 'app/push/push.html',
           controller: 'PushCtrl'
         }

@@ -7,33 +7,46 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services', 'starter.directives'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $cordovaPush) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
     if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
+    
   });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-    .state('tab', {
+  .state('tab', {
     url: "/tab",
     abstract: true,
     templateUrl: "app/components/tabs.html"
   });
 
-  // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/home');
 
-});
+})
+
+.controller('AppController', function($scope, $rootScope, ngPush, PushService){
+    $rootScope.$on('$cordovaPush:notificationReceived', ngPush.notificationReceived);
+
+    $rootScope.hasPush = function(){
+      return PushService.getPush();
+    }
+})
+;
 
 angular.module('starter.controllers', []);
-angular.module('starter.services', []);
 angular.module('starter.directives', []);
+
+angular.module('starter.services', [])
+.run( function($ionicPlatform, $rootScope, $cordovaPush, ngPush){
+  $ionicPlatform.ready(function() {
+    ngPush.register();
+    
+  });
+});

@@ -12,7 +12,7 @@
   <script src="cordova.js"></script>
 </head>
 
-<body ng-app="starter">
+<body ng-app="starter" ng-controller="AppController">
   <!--
       The nav bar that will be updated as we navigate between views.
     -->
@@ -28,22 +28,24 @@
   <ion-nav-view></ion-nav-view>
   <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANeX2kKiZQgFi1XTKT5Q9PK_iLT2AnaFY"></script>
   <!-- inject:js -->
   <script src="app.js"></script>
   <script src="app/carta/carta.controller.js"></script>
   <script src="app/carta/carta.js"></script>
-  <script src="app/contact/contact.controller.js"></script>
-  <script src="app/contact/contact.js"></script>
   <script src="app/galery/galery.controller.js"></script>
   <script src="app/galery/galery.js"></script>
+  <script src="app/contact/contact.controller.js"></script>
+  <script src="app/contact/contact.js"></script>
   <script src="app/home/home.controller.js"></script>
   <script src="app/home/home.js"></script>
-  <script src="app/components/map/map.js"></script>
-  <script src="app/components/slideImg/slideImg.js"></script>
+  <script src="app/push/ngPush.js"></script>
   <script src="app/push/push.controller.js"></script>
   <script src="app/push/push.js"></script>
+  <script src="app/push/pushService.js"></script>
+  <script src="app/components/map/map.js"></script>
+  <script src="app/components/slideImg/slideImg.js"></script>
   <!-- endinject -->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLHPZ-ZnKHDdE4ImgoNCqARJAlJ633PL4"></script>
   <script src="lib/ngCordova/dist/ng-cordova.js"></script>
 
 </body>
